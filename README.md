@@ -2,7 +2,7 @@
 
 # TO RUN: 
 - modify the strategy in generate_signal in Strategy.py 
-- modify the exchange info, baktest periodin main.py, will need to implement other data querying for market other than Bitmex
+- modify the exchange info, baktest period in main.py, will need to implement other data querying for market other than Bitmex
   - for specific data formatting, please refer to DataReader.py by running it with python3 DataReader.py
 - then in console enter python3 main.py to get the backtest started, reults (realized PNL, total PNL) will be printed to the console
 - Note: invalid orders are printed to screen for validaition: most of those orders are not valid because he market moves in same direction in subsequent ticks, causing one side of the ask and bid being too poorly estimated (by very distant last price).
@@ -25,7 +25,7 @@
 - Should be able to place multiple orders at a time
 - Compare desired order with local order book, if exist, no need to place again, if not, place it, cancel all undesired order
 - Objective: markett making and placee as much as possible
-- Single coin type        #
+- Single coin type        
 - def cancel_order to cancel all past unwanted order every tick
 - In reality, your limited order (if price higher than other side limited order price) will become a taker and pay taker fee, so defined check order
     - according to last sell buy price to ask ank bid, your order price should not be between the bid ask
